@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Basic -->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- Mobile Metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <link rel="shortcut icon" href="images/favicon.jpeg" type="image/x-icon">
+    <title>Koperasi</title>
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" />
+    <!-- Fonts Style -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&family=Montserrat:wght@600;800&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/css/nice-select.min.css" />
+    <!-- Custom styles for this template -->
+    <link href="css/style.css" rel="stylesheet" />
+    <link href="css/responsive.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* Jika memiliki file Trajan Pro, gunakan font-face */
+        @font-face {
+            font-family: 'Trajan Pro';
+            src: url('fonts/TrajanPro-Regular.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        /* Gaya font untuk nama */
+        .detail-box h5 {
+            font-family: 'Trajan Pro', 'Cinzel', serif; /* Gunakan Cinzel jika Trajan Pro tidak tersedia */
+            font-weight: bold;
+            font-size: 20px;
+        }
+
+        /* Hero Area Background */
+        .hero_area {
+            position: relative;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .hero_bg_box {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .carousel-item {
+            height: 100vh;
+        }
+
+        /* Navbar */
+        .header_bottom {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 2;
+            background: rgba(0, 0, 0, 0.5); /* Semi-transparent background for navbar */
+        }
+
+        .navbar {
+            padding: 15px 20px; /* Add padding to the navbar */
+        }
+
+        .navbar-nav {
+            margin-left: auto; /* Aligns navbar items to the right */
+        }
+
+        .navbar-nav .nav-link {
+            color: #ffffff; /* Change link color to white */
+            text-transform: uppercase; /* Uppercase links */
+            padding: 5px 15px; /* Add padding to links */
+        }
+
+        .navbar-nav .nav-link:hover {
+            color: #ffffff; /* Change color on hover */
+        }
+
+        /* Detail Box (Text and Logo) */
+        .hero_area .detail-box {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            color: #fff;
+            z-index: 1;
+            max-width: 80%; /* Batasi lebar maksimal */
+            padding: 20px; /* Tambah padding agar lebih rapi */
+        }
+
+        .detail-box h1 {
+            font-size: 3rem;
+            font-weight: bold;
+            margin-bottom: 20px; /* Jarak bawah untuk judul */
+        }
+
+        .detail-box p {
+            font-size: 1.2rem;
+            margin: 10px 0; /* Jarak atas dan bawah untuk paragraf */
+        }
+
+        .detail-box p:last-child {
+            margin-top: 20px; /* Jarak atas khusus untuk paragraf terakhir */
+            font-weight: bold; /* Tebalkan teks paragraf terakhir */
+        }
+
+        .logo-container img {
+            width: 100px;
+            height: auto;
+            margin-bottom: 20px;
+        }
+
+        /* Responsive Background for Mobile Mode */
+        @media (max-width: 768px) {
+            .hero_area {
+                height: 100vh;
+                background-size: 100% 100%;
+                background-position: center;
+            }
+
+            .carousel-item {
+                height: 100vh;
+            }
+
+            .hero_bg_box {
+                background-size: 100% 100%;
+                background-position: center;
+                height: 100vh;
+            }
+
+            .hero_bg_box:nth-child(1) {
+                background-image: url('images/bg-new/bg-1-mobile.jpeg');
+            }
+
+            .hero_bg_box:nth-child(2) {
+                background-image: url('images/bg-new/bg-2-mobile.jpeg');
+            }
+
+            .hero_bg_box:nth-child(3) {
+                background-image: url('images/bg-new/enhanced_image-mobile.jpeg');
+            }
+
+            .detail-box h1 {
+                font-size: 2rem;
+            }
+
+            .detail-box p {
+                font-size: 1rem;
+            }
+        }
+
+        /* Service, About, and Team Section */
+        .service_section,
+        .about_section,
+        .team_section {
+            padding: 60px 0; /* Add padding for sections */
+        }
+
+        .heading_container {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .heading_container h2 {
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        /* Responsive adjustments for text and images */
+        .service_section .box,
+        .about_section .detail-box,
+        .team_section .box {
+            margin-bottom: 30px; /* Spacing between boxes */
+            text-align: center; /* Center text in boxes */
+        }
+
+        .service_section .box img,
+        .about_section .img-box img,
+        .team_section .box .img-box img {
+            max-width: 100%; /* Ensure images are responsive */
+            height: auto; /* Maintain aspect ratio */
+        }
+
+        /* Struktur Koperasi Section */
+        .top-members {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+
+        .team-member {
+            text-align: center;
+            margin: 10px;
+            flex: 1 1 30%; /* Flex properties for responsive layout */
+        }
+
+        .team-member .img-box img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .team-member .img-box img:hover {
+            transform: scale(1.1);
+        }
+
+        .team-member h3 {
+            margin-top: 10px;
+            font-size: 1.5rem;
+        }
+
+        .team-member p {
+            font-size: 1rem;
+            color: #555;
+        }
+
+        @media (max-width: 768px) {
+            .team-member {
+                flex: 1 1 100%; /* Full width on smaller screens */
+            }
+        }
+
+        /* Animasi Fade In */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        /* Animasi Slide Up */
+        @keyframes slideUp {
+            from {
+                transform: translateY(50px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        /* Class untuk animasi */
+        .fade-in {
+            opacity: 0;
+        }
+
+        .slide-up {
+            opacity: 0;
+        }
+
+        /* Trigger animasi saat elemen muncul */
+        .fade-in.visible {
+            animation: fadeIn 1s ease-in-out forwards;
+        }
+
+        .slide-up.visible {
+            animation: slideUp 1s ease-in-out forwards;
+        }
+
+        /* Delay untuk setiap anggota */
+        .team-member:nth-child(1) {
+            animation-delay: 0.2s;
+        }
+
+        .team-member:nth-child(2) {
+            animation-delay: 0.4s;
+        }
+
+        .team-member:nth-child(3) {
+            animation-delay: 0.6s;
+        }
+
+        /* Gaya untuk footer */
+        .footer_section {
+            background-color: #333;
+            color: #fff;
+            padding: 40px 0;
+            text-align: center;
+        }
+
+        .footer_section p {
+            margin-bottom: 0;
+        }
+
+        .footer_section a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        .footer_section a:hover {
+            color: #0056b3;
+        }
+
+        /* Gaya untuk dropdown bahasa */
+        .navbar .dropdown-menu {
+            min-width: 120px;
+        }
+
+        .navbar .dropdown-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .navbar .dropdown-item img {
+            width: 20px;
+            height: auto;
+        }
+
+        .mitra_section {
+            padding: 40px 0;
+            background-color: #f8f9fa;
+        }
+
+        .mitra_section h2 {
+            margin-bottom: 30px;
+            font-size: 2rem;
+            font-weight: bold;
+        }
+
+        .mitra_section img {
+            border-radius: 10px;
+            margin-bottom: 10px;
+        }
+
+        .mitra_section p {
+            font-size: 1rem;
+            color: #333;
+        }
+
+        @media (max-width: 768px) {
+            .mitra_section .row {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .mitra_section .col-6 {
+                flex: 0 0 50%;
+                max-width: 50%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Hero Area -->
+    <div class="hero_area">
+        <!-- Carousel for Background -->
+        <div id="carouselExampleControls" class="carousel slide" data-ride="carousel" data-interval="3000">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="hero_bg_box" style="background-image: url(images/bg-new/bg-1.jpeg);"></div>
+                </div>
+                <div class="carousel-item">
+                    <div class="hero_bg_box" style="background-image: url(images/bg-new/bg-2.jpeg);"></div>
+                </div>
+                <div class="carousel-item">
+                    <div class="hero_bg_box" style="background-image: url(images/bg-new/enhanced_image.jpeg);"></div>
+                </div>
+            </div>
+        </div>
+        <!-- Navbar -->
+        <div class="header_bottom">
+            <div class="container-fluid">
+                <nav class="navbar navbar-expand-lg custom_nav-container">
+                    <a class="navbar-brand" href="index.html">
+                        <img src="images/logo2.png" alt="Logo">
+                    </a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav ml-auto">
+                            <li class="nav-item active">
+                                <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="about.html">About</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Top Management
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item" href="service.html">Pendiri Koperasi</a>
+                                    <a class="dropdown-item" href="advisor pengawas.html">Advisor Koperasi</a>
+                                    <a class="dropdown-item" href="legal koperasi.html">Legal Koperasi</a>
+                                    <a class="dropdown-item" href="dewan pengawas.html">Dewan Pengawas</a>
+                                    <a class="dropdown-item" href="anggota.html">Anggota Koperasi</a>
+                                </div>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="team.html">Contact</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="portofolio.html">Portofolio</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="berita.html">Berita</a>
+                            </li>
+                            <!-- Dropdown Bahasa -->
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="languageDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <img src="https://flagcdn.com/id.svg" alt="Indonesia" style="width: 20px; height: auto;"> Bahasa
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="languageDropdown">
+                                    <a class="dropdown-item" href="#" data-lang="id">
+                                        <img src="https://flagcdn.com/id.svg" alt="Indonesia" style="width: 20px; height: auto;"> Indonesia
+                                    </a>
+                                    <a class="dropdown-item" href="#" data-lang="en">
+                                        <img src="https://flagcdn.com/gb.svg" alt="English" style="width: 20px; height: auto;"> English
+                                    </a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </div>
+        <!-- Detail Box (Text and Logo) -->
+        <div class="detail-box">
+            <h1 id="heading">Koperasi Energi <br> Pertambangan, Perdagangan</h1>
+            <p id="subheading">Ayo Bermitra Bersama Kami. Untuk Menjadi Anggota Koperasi Menuju Perubahan</p>
+            <p id="tagline"># Indonesia Emas #</p>
+        </div>
+    </div>
+
+    <!-- Teks di atas Sumber Daya Manusia -->
+    <section class="service_section layout_padding">
+        <div class="container">
+            <div class="heading_container heading_center">
+                <h2 id="sectionTitle">
+                    Koperasi Patuari Mining Niaga penggerak perekonomian rakyat.
+                </h2>
+                <p id="sectionDescription" class="col-lg-8 px-0">
+                    Digitalisasi Koperasi Patuari Mining Niaga mulai melakukan transformasi digital secara bertahap. 
+                    Hadir untuk membantu kesejahteraan masyarakat di sekitar dan terus berupaya berinovasi dalam pengembangan koperasi yang lebih modern.
+                </p>
+                <p id="sectionContent">
+                    Patuari Mining Niaga Adalah Koperasi Produsen Energi Terbarukan, Pertambangan, Perdagangan  yang Mengubah Paradigma Di Indonesia Yang Menerapkan  "Eco-friendly" Atau Ramah Lingkungan  Yang Inovatif. 
+                    Bertujuan Untuk Mewujudkan Cita-Cita Pada Pasal 33 Ayat (3) Undang-Undang Dasar (UUD) 1945. Pasal Tersebut Menjelaskan Bahwa Bumi, Air, Dan Kekayaan Alam Yang Berada Di Dalamnya Dikuasai Oleh Negara Dan Dimanfaatkan Untuk Kesejahteraan Rakyat.
+                    Serta Konsep Rantai Pasok Dalam Dunia Perdagangan Sub-Sektor Mikro ,UMKM, Makro. Dalam Rangka Mendukung Program - Program Pemerintah Sulut Dalam Upaya Meningkatkan 
+                    Kesejahteraan Masyarakat Luas Dan Tunas - Tunas Bangsa Indonesia. 
+                </p>
+                <p id="sectionTagline"># Indonesia Emas #</p>
+                <p id="sectionSolution">" Your Trade Solution "</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- team section -->
+    <section class="team_section layout_padding">
+        <div class="container">
+            <div class="heading_container heading_center">
+                <h2 id="teamTitle" class="animated-font">Sumber Daya Manusia</h2>
+                <p id="teamSubtitle"> Didukung oleh IATPI</p>
+            </div>
+            <div class="row">
+                <div class="col-md-4 col-sm-6 mx-auto">
+                    <div class="box slide-up">
+                        <div class="img-box">
+                            <img src="images/t2.png" alt="" class="animated-image">
+                        </div>
+                        <div class="detail-box">
+                            <h5>E. Theny Tampi</h5>
+                            <h6>Ketua</h6>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 mx-auto">
+                    <div class="box slide-up">
+                        <div class="img-box">
+                            <img src="images/t1.png" alt="" class="animated-image">
+                        </div>
+                        <div class="detail-box">
+                            <h5>Randi Mamola</h5>
+                            <h6>Sekretaris</h6>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 mx-auto">
+                    <div class="box slide-up">
+                        <div class="img-box">
+                            <img src="images/t3.png" alt="" class="animated-image">
+                        </div>
+                        <div class="detail-box">
+                            <h5>Muhammad Khaliq Mantiri</h5>
+                            <h6>Bendahara</h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mitra Section -->
+    <section class="mitra_section">
+        <div class="container">
+            <div class="heading_container heading_center">
+                <h2>Mitra Kami</h2>
+            </div>
+            <div class="row justify-content-center">
+                <!-- Mitra 1 -->
+                <div class="col-6 col-md-3 text-center mb-4">
+                    <img src="images/esdm-removebg-preview (1).png" alt="Mitra 1" class="img-fluid" style="width: 100px; height: 100px;">
+                </div>
+                <!-- Mitra 2 -->
+                <div class="col-6 col-md-3 text-center mb-4">
+                    <img src="images/kemenko.png" alt="Mitra 2" class="img-fluid" style="width: 100px; height: 100px;">
+                </div>
+                <!-- Mitra 3 -->
+                <div class="col-6 col-md-3 text-center mb-4">
+                    <img src="images/lingkungan-removebg-preview.png" alt="Mitra 3" class="img-fluid" style="width: 100px; height: 100px;">
+                </div>
+                <!-- Mitra 4 -->
+                <div class="col-6 col-md-3 text-center mb-4">
+                    <img src="images/itb.png" alt="Mitra 4" class="img-fluid" style="width: 100px; height: 100px; border-radius: 50%; object-fit: cover; border: 1px solid #fff; padding: 5px;">
+                </div>
+                <!-- Mitra 5 -->
+                <div class="col-6 col-md-3 text-center mb-4">
+                    <img src="images/al.png" alt="Mitra 5" class="img-fluid" style="width: 100px; height: 100px;">
+                </div>
+                <!-- Mitra 6 -->
+                <div class="col-6 col-md-3 text-center mb-4">
+                    <img src="images/LOGO_KOARMADA_RI_PNG.png" alt="Mitra 6" class="img-fluid" style="width: 100px; height: 100px;">
+                </div>
+                <!-- Mitra 7 -->
+                <div class="col-6 col-md-3 text-center mb-4">
+                    <img src="images/siloam.png" alt="Mitra 7" class="img-fluid" style="width: 100px; height: 100px;">
+                </div>
+                <div class="col-6 col-md-3 text-center mb-4">
+                    <img src="images/iacpi-removebg-preview.png" alt="Mitra 7" class="img-fluid" style="width: 100px; height: 100px;">
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Mitra Section -->
+    <section class="mitra_section">
+        <div class="container">
+            <div class="heading_container heading_center">
+                <h2>Bank</h2>
+            </div>
+            <div class="row justify-content-center">
+                <!-- Mitra 1 -->
+                <div class="col-6 col-md-3 text-center mb-4">
+                    <img src="images/bca.png" alt="Mitra 1" class="img-fluid" style="width: 100px; height: 100px;">
+                </div>
+                <!-- Mitra 2 -->
+                <div class="col-6 col-md-3 text-center mb-4">
+                    <img src="images/bank-sulut.png" alt="Mitra 2" class="img-fluid" style="width: 100px; height: 100px;">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="footer_section">
+        <div class="container">
+            <p id="footerText">
+                &copy; <span id="displayYear"></span> All Rights Reserved By Patuari Mining Niaga
+            </p>
+        </div>
+    </footer>
+
+    <!-- jQuery -->
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <!-- popper js -->
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <!-- bootstrap js -->
+    <script src="js/bootstrap.js"></script>
+    <!-- owl slider -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <!-- nice select -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/js/jquery.nice-select.min.js"></script>
+    <!-- custom js -->
+    <script src="js/custom.js"></script>
+    <!-- Google Map -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCh39n5U-4IoWpsVGUHWdqB6puEkhRLdmI&callback=myMap"></script>
+    <!-- End Google Map -->
+    <script>
+        // Set current year in the footer
+        document.getElementById('displayYear').textContent = new Date().getFullYear();
+        // Intersection Observer for scroll-triggered animations
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target); // Stop observing after it becomes visible
+                }
+            });
+        }, {
+            threshold: 0.5 // Trigger when 50% of the element is visible
+        });
+
+        // Observe elements that should animate on scroll
+        document.querySelectorAll('.fade-in, .slide-up, .zoom-in, .animated-font, .animated-image, .logo-image').forEach(element => {
+            observer.observe(element);
+        });
+    </script>
+
+    <script>
+        // Data konten dalam dua bahasa
+        const content = {
+            id: {
+                heading: "Koperasi Energi <br> Pertambangan, Perdagangan",
+                subheading: "Ayo Bermitra Bersama Kami. Untuk Menjadi Anggota Koperasi Menuju Perubahan",
+                tagline: "# Indonesia Emas #",
+                sectionTitle: "Koperasi Patuari Mining Niaga penggerak perekonomian rakyat.",
+                sectionDescription: "Digitalisasi Koperasi Patuari Mining Niaga mulai melakukan transformasi digital secara bertahap. Hadir untuk membantu kesejahteraan masyarakat di sekitar dan terus berupaya berinovasi dalam pengembangan koperasi yang lebih modern.",
+                sectionContent: "Patuari Mining Niaga Adalah Koperasi Produsen Energi Terbarukan, Pertambangan, Perdagangan  yang Mengubah Paradigma Di Indonesia Yang Menerapkan  Eco-friendly  Atau Ramah Lingkungan  Yang Inovatif. Bertujuan Untuk Mewujudkan Cita-Cita Pada Pasal 33 Ayat (3) Undang-Undang Dasar (UUD) 1945. Pasal Tersebut Menjelaskan Bahwa Bumi, Air, Dan Kekayaan Alam Yang Berada Di Dalamnya Dikuasai Oleh Negara Dan Dimanfaatkan Untuk Kesejahteraan Rakyat. Serta Konsep Rantai Pasok Dalam Dunia Perdagangan Sub-Sektor Mikro ,UMKM, Makro. Dalam Rangka Mendukung Program - Program Pemerintah Sulut Dalam Upaya Meningkatkan Kesejahteraan Masyarakat Luas Dan Tunas - Tunas Bangsa Indonesia. ",
+                sectionTagline: "# Indonesia Emas #",
+                sectionSolution: '" Your Trade Solution "',
+                teamTitle: "Sumber Daya Manusia",
+                teamSubtitle: "Didukung oleh IATPI",
+                footerText: "&copy; <span id='displayYear'></span> All Rights Reserved By Patuari Mining Niaga"
+            },
+            en: {
+                heading: "Energy Cooperative <br> Mining, Trade",
+                subheading: "Let's Partner With Us. To Become a Cooperative Member Towards Change",
+                tagline: "# Golden Indonesia #",
+                sectionTitle: "Patuari Mining Niaga Cooperative, the Driver of People's Economy.",
+                sectionDescription: "The digitalization of Patuari Mining Niaga Cooperative is gradually undergoing digital transformation. Present to help the welfare of the surrounding community and continue to strive for innovation in the development of a more modern cooperative.",
+                sectionContent: "Patuari Mining Niaga is a Cooperative Producer of Renewable Energy, Mining, and Trade that Changes the Paradigm in Indonesia by Applying 'Eco-friendly' or Environmentally Friendly and Innovative. Aiming to realize the ideals of Article 33 paragraph (3) of the 1945 Constitution. The article explains that the earth, water, and natural resources contained therein are controlled by the state and used for the welfare of the people. As well as the Supply Chain Concept in the World of Trade in the Micro, MSME, and Macro Sub-Sectors. In Order to Support the Programs of the North Sulawesi Government in Efforts to Improve the Welfare of the Wider Community and the Young Generation of Indonesia.",
+                sectionTagline: "# Golden Indonesia #",
+                sectionSolution: '" Your Trade Solution "',
+                teamTitle: "Human Resources",
+                teamSubtitle: "Supported by IATPI",
+                footerText: "&copy; <span id='displayYear'></span> All Rights Reserved By Patuari Mining Niaga"
+            }
+        };
+
+        // Fungsi untuk mengubah bahasa
+        function changeLanguage(lang) {
+            // Ambil elemen yang perlu diubah
+            document.getElementById("heading").innerHTML = content[lang].heading;
+            document.getElementById("subheading").textContent = content[lang].subheading;
+            document.getElementById("tagline").textContent = content[lang].tagline;
+            document.getElementById("sectionTitle").textContent = content[lang].sectionTitle;
+            document.getElementById("sectionDescription").textContent = content[lang].sectionDescription;
+            document.getElementById("sectionContent").textContent = content[lang].sectionContent;
+            document.getElementById("sectionTagline").textContent = content[lang].sectionTagline;
+            document.getElementById("sectionSolution").textContent = content[lang].sectionSolution;
+            document.getElementById("teamTitle").textContent = content[lang].teamTitle;
+            document.getElementById("teamSubtitle").textContent = content[lang].teamSubtitle;
+            document.getElementById("footerText").innerHTML = content[lang].footerText;
+
+            // Simpan preferensi bahasa ke localStorage
+            localStorage.setItem("language", lang);
+        }
+
+        // Event listener untuk dropdown bahasa
+        document.querySelectorAll('.dropdown-item[data-lang]').forEach(item => {
+            item.addEventListener('click', function (e) {
+                e.preventDefault();
+                const lang = this.getAttribute('data-lang');
+                changeLanguage(lang);
+            });
+        });
+
+        // Set bahasa awal saat halaman dimuat
+        document.addEventListener("DOMContentLoaded", function () {
+            const savedLang = localStorage.getItem("language") || "id"; // Default bahasa Indonesia
+            changeLanguage(savedLang);
+        });
+    </script>
+</body>
+</html>
