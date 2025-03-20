@@ -357,6 +357,40 @@
                 max-width: 50%;
             }
         }
+
+        /* Sertifikasi Section */
+.sertifikasi_section {
+    padding: 60px 0;
+}
+
+.sertifikasi_section .heading_container {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.sertifikasi_section .heading_container h2 {
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.sertifikasi_section img {
+    max-width: 100%;
+    height: auto;
+    margin: 20px auto;
+    display: block;
+}
+.sertifikasi-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.sertifikasi-image {
+    width: 550px; /* Ubah ukuran gambar */
+    height: auto;
+    margin: 10px; /* Tambahkan margin untuk membuat gambar tidak terlalu rapat */
+    border-radius: 10px; /* Tambahkan border-radius untuk membuat gambar lebih bulat */
+}
     </style>
 </head>
 
@@ -510,6 +544,23 @@
             </div>
         </div>
     </section>
+
+   <!-- Sertifikasi Section -->
+<section class="sertifikasi_section layout_padding">
+    <div class="container">
+        <div class="heading_container heading_center">
+            <h2 id="sertifikasiTitle">Sertifikasi</h2>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="sertifikasi-gallery">
+                    <img src="images/sertifikat 1.jpeg" alt="Sertifikasi" class="img-fluid sertifikasi-image">
+                    <img src="images/sertifikat 2.jpeg" alt="Sertifikasi" class="img-fluid sertifikasi-image">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
     <!-- Mitra Section -->
     <section class="mitra_section">
