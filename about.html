@@ -26,6 +26,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/css/nice-select.min.css" integrity="sha256-mLBIhmBvigTFWPSCtvdu6a76T+3Xyt+K571hupeFLg4=" crossorigin="anonymous" />
   <!-- Custom styles for this template -->
   <link href="css/style.css" rel="stylesheet" />
+  <link rel="stylesheet" href="script.js">
   <!-- Responsive style -->
   <link href="css/responsive.css" rel="stylesheet" />
 
@@ -69,6 +70,50 @@
       margin-bottom: 8px;
       font-size: 14px;
     }
+
+    .header_bottom {
+  padding: 10px 0;
+  background-color: transparent;
+}
+
+.navbar-nav .nav-link {
+  color: #fff !important;
+  font-weight: 600;
+  margin: 0 10px;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #007bff !important;
+}
+
+.navbar-brand img {
+  height: 70px;
+}
+
+.dropdown-menu {
+  background-color: #555555;
+  border: 1px solid #555555;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.dropdown-item {
+  color: #fff !important;
+}
+
+.dropdown-item:hover {
+  background-color: #007bff;
+  color: #fff !important;
+}
+
+.navbar-toggler {
+  border: none;
+  padding: 6px 10px;
+}
+
+.navbar-toggler-icon {
+  background-color: #fff;
+  border-radius: 3px;
+}
 
     /* Navbar dengan warna hitam transparan */
     .header_bottom {
@@ -261,12 +306,13 @@
     }
   </style>
 </head>
+<body>
+  <audio id="background-music" autoplay loop>
+    <source src="images/WhatsApp Audio 2025-03-22 at 01.08.14.mpeg" type="audio/mp3">
+    Your browser does not support the audio element.
+  </audio>
 
-<body class="sub_page">
-  <div class="hero_area">
-    <div class="hero_bg_box">
-      <img src="images/hero-bg.jpg" alt="">
-    </div>
+
 
     <!-- Navbar -->
     <div class="header_bottom">
@@ -619,6 +665,36 @@
       // Initial check
       checkVisibility();
     });
+  </script>
+
+  <script>
+    const audio = document.getElementById('background-music');
+const musicParts = [
+  { start: 33, end: 264 }, // menit ke-0.33 - 4.44
+  { start: 264, end: audio.duration } // menit ke-4.44 - akhir lagu
+];
+
+let currentPart = 0;
+let currentTime = localStorage.getItem('currentTime') || musicParts[currentPart].start;
+audio.currentTime = currentTime;
+
+audio.addEventListener('timeupdate', () => {
+  localStorage.setItem('currentTime', audio.currentTime);
+  if (audio.currentTime >= musicParts[currentPart].end) {
+    currentPart++;
+    if (currentPart >= musicParts.length) {
+      currentPart = 0;
+      audio.currentTime = musicParts[currentPart].start;
+    } else {
+      audio.currentTime = musicParts[currentPart].start;
+    }
+  }
+});
+
+// Simpan waktu musik saat ini sebelum pindah halaman
+window.onbeforeunload = function() {
+  localStorage.setItem('currentTime', audio.currentTime);
+};
   </script>
 </body>
 </html>
