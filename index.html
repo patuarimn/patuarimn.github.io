@@ -395,6 +395,10 @@
 </head>
 
 <body>
+  <audio id="background-music" autoplay loop>
+    <source src="images/WhatsApp Audio 2025-03-22 at 01.08.14.mpeg" type="audio/mp3">
+    Your browser does not support the audio element.
+  </audio>
     <!-- Hero Area -->
     <div class="hero_area">
         <!-- Carousel for Background -->
@@ -732,5 +736,17 @@
             changeLanguage(savedLang);
         });
     </script>
+
+<script>
+    const audio = document.getElementById('background-music');
+    audio.currentTime = 33; // menit ke-0.33
+    audio.addEventListener('timeupdate', () => {
+        if (audio.currentTime >= 274) { // menit ke-4.34
+            audio.currentTime = 284; // lanjut ke menit ke-4.44
+        } else if (audio.currentTime >= 294) { // menit ke-4.94 (selesai)
+            audio.currentTime = 33; // kembali ke menit ke-0.33
+        }
+    });
+</script>
 </body>
 </html>
