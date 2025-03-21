@@ -668,18 +668,19 @@
   </script>
 
   <script>
-    const audio = document.getElementById('background-music');
+   const audio = document.getElementById('background-music');
 const musicParts = [
   { start: 33, end: 264 }, // menit ke-0.33 - 4.44
   { start: 264, end: audio.duration } // menit ke-4.44 - akhir lagu
 ];
 
-let currentPart = 0;
+let currentPart = localStorage.getItem('currentPart') || 0;
 let currentTime = localStorage.getItem('currentTime') || musicParts[currentPart].start;
 audio.currentTime = currentTime;
 
 audio.addEventListener('timeupdate', () => {
   localStorage.setItem('currentTime', audio.currentTime);
+  localStorage.setItem('currentPart', currentPart);
   if (audio.currentTime >= musicParts[currentPart].end) {
     currentPart++;
     if (currentPart >= musicParts.length) {
@@ -690,11 +691,6 @@ audio.addEventListener('timeupdate', () => {
     }
   }
 });
-
-// Simpan waktu musik saat ini sebelum pindah halaman
-window.onbeforeunload = function() {
-  localStorage.setItem('currentTime', audio.currentTime);
-};
   </script>
 </body>
 </html>
