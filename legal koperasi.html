@@ -78,6 +78,11 @@
   </style>
 </head>
 
+<body>
+  <audio id="background-music" autoplay loop>
+    <source src="images/WhatsApp Audio 2025-03-22 at 01.08.14.mpeg" type="audio/mp3">
+    Your browser does not support the audio element.
+  </audio>
     <!-- Navbar -->
     <div class="header_bottom">
       <div class="container-fluid">
@@ -237,6 +242,31 @@
       changeLanguage(savedLang);
     });
   </script>
+  <script>
+    const audio = document.getElementById('background-music');
+const musicParts = [
+  { start: 33, end: 264 }, // menit ke-0.33 - 4.44
+  { start: 264, end: audio.duration } // menit ke-4.44 - akhir lagu
+];
+
+let currentPart = localStorage.getItem('currentPart') || 0;
+let currentTime = localStorage.getItem('currentTime') || musicParts[currentPart].start;
+audio.currentTime = currentTime;
+
+audio.addEventListener('timeupdate', () => {
+  localStorage.setItem('currentTime', audio.currentTime);
+  localStorage.setItem('currentPart', currentPart);
+  if (audio.currentTime >= musicParts[currentPart].end) {
+    currentPart++;
+    if (currentPart >= musicParts.length) {
+      currentPart = 0;
+      audio.currentTime = musicParts[currentPart].start;
+    } else {
+      audio.currentTime = musicParts[currentPart].start;
+    }
+  }
+});
+</script>
 </body>
 
 </html>
