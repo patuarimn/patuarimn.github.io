@@ -1403,6 +1403,39 @@ footer .copyright p {
   color: #fff !important;
 }
 
+.dropdown-item {
+  color: #333;
+  background-color: #333;
+  padding: 10px 20px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.dropdown-item:hover, .dropdown-item.active {
+  background-color: #ccc; /* Warna abu muda */
+  color: #333;
+}
+
+.dropdown-item[data-lang="id"] {
+  background-color: #333;
+  color: #fff;
+}
+
+.dropdown-item[data-lang="id"].active {
+  background-color: #ccc; /* Warna abu muda */
+  color: #333;
+}
+
+.dropdown-item[data-lang="en"] {
+  background-color: #333;
+  color: #fff;
+}
+
+.dropdown-item[data-lang="en"].active {
+  background-color: #ccc; /* Warna abu muda */
+  color: #333;
+}
+
 /* Toggler icon */
 .navbar-toggler {
   border: none;
