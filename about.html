@@ -72,48 +72,48 @@
     }
 
     .header_bottom {
-  padding: 10px 0;
-  background-color: transparent;
-}
+      padding: 10px 0;
+      background-color: transparent;
+    }
 
-.navbar-nav .nav-link {
-  color: #fff !important;
-  font-weight: 600;
-  margin: 0 10px;
-}
+    .navbar-nav .nav-link {
+      color: #fff !important;
+      font-weight: 600;
+      margin: 0 10px;
+    }
 
-.navbar-nav .nav-link:hover {
-  color: #007bff !important;
-}
+    .navbar-nav .nav-link:hover {
+      color: #007bff !important;
+    }
 
-.navbar-brand img {
-  height: 70px;
-}
+    .navbar-brand img {
+      height: 70px;
+    }
 
-.dropdown-menu {
-  background-color: #555555;
-  border: 1px solid #555555;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-}
+    .dropdown-menu {
+      background-color: #555555;
+      border: 1px solid #555555;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    }
 
-.dropdown-item {
-  color: #fff !important;
-}
+    .dropdown-item {
+      color: #fff !important;
+    }
 
-.dropdown-item:hover {
-  background-color: #007bff;
-  color: #fff !important;
-}
+    .dropdown-item:hover {
+      background-color: #007bff;
+      color: #fff !important;
+    }
 
-.navbar-toggler {
-  border: none;
-  padding: 6px 10px;
-}
+    .navbar-toggler {
+      border: none;
+      padding: 6px 10px;
+    }
 
-.navbar-toggler-icon {
-  background-color: #fff;
-  border-radius: 3px;
-}
+    .navbar-toggler-icon {
+      background-color: #fff;
+      border-radius: 3px;
+    }
 
     /* Navbar dengan warna hitam transparan */
     .header_bottom {
@@ -213,10 +213,106 @@
       margin-bottom: 8px;
     }
 
+    /* Vision & Mission Section - Enhanced for Mobile */
+    .vision-mission-section {
+      padding: 40px 0;
+      background-color: #f8f9fa;
+    }
+    
+    .section-title {
+      font-size: 28px;
+      font-weight: 700;
+      color: #2c3e50;
+      margin-bottom: 15px;
+      position: relative;
+      text-transform: uppercase;
+      margin-top: 70px; /* Memberikan ruang untuk navbar */
+    }
+  
+    .title-divider {
+      width: 60px;
+      height: 3px;
+      background: linear-gradient(to right, #3498db, #2ecc71);
+      margin: 0 auto 25px;
+      border-radius: 3px;
+    }
+    
+    .vision-card, .mission-card {
+      border: none;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      transition: all 0.3s ease;
+      background-color: white;
+      height: 100%;
+      margin-bottom: 20px;
+    }
+    
+    .vision-card:hover, .mission-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    }
+    
+    .vision-card {
+      border-top: 4px solid #3498db;
+    }
+    
+    .mission-card {
+      border-top: 4px solid #2ecc71;
+    }
+    
+    .card-title {
+      font-size: 20px;
+      font-weight: 600;
+      color: #2c3e50;
+      margin-bottom: 15px;
+    }
+    
+    .divider-short {
+      width: 40px;
+      height: 2px;
+      background: #3498db;
+      margin-bottom: 15px;
+    }
+    
+    .mission-card .divider-short {
+      background: #2ecc71;
+    }
+    
+    .card-text {
+      font-size: 15px;
+      line-height: 1.7;
+      color: #555;
+      word-wrap: break-word;
+    }
+    
+    .mission-list {
+      padding-left: 18px;
+    }
+    
+    .mission-list li {
+      font-size: 14px;
+      line-height: 1.7;
+      color: #555;
+      margin-bottom: 10px;
+      position: relative;
+      word-wrap: break-word;
+    }
+    
+    .mission-list li:before {
+      content: "";
+      position: absolute;
+      left: -18px;
+      top: 8px;
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background-color: #2ecc71;
+    }
+
     /* Penyesuaian untuk mobile */
     @media (max-width: 768px) {
       body {
-        font-size: 12px;
+        font-size: 14px !important;
       }
 
       h1, h2, h3, h4, h5, h6 {
@@ -224,7 +320,7 @@
       }
 
       p {
-        font-size: 12px;
+        font-size: 14px;
       }
 
       ol, ul {
@@ -233,7 +329,7 @@
 
       .navbar-nav .nav-link {
         margin: 5px 0;
-        font-size: 12px;
+        font-size: 14px;
       }
 
       .navbar-brand img {
@@ -242,7 +338,7 @@
 
       .section {
         margin: 20px 0;
-        padding: 20px 0;
+        padding: 20px 15px !important;
       }
 
       .heading_container h2 {
@@ -251,6 +347,65 @@
 
       .heading_container h4 {
         font-size: 1em;
+      }
+      
+      /* Mobile-specific adjustments for Vision & Mission */
+      .vision-mission-section {
+        padding: 30px 15px;
+      }
+      
+      .section-title {
+        font-size: 24px;
+        margin-bottom: 10px;
+      }
+      
+      .title-divider {
+        width: 50px;
+        margin-bottom: 20px;
+      }
+      
+      .vision-card, .mission-card {
+        margin-bottom: 15px;
+      }
+      
+      .card-title {
+        font-size: 18px;
+      }
+      
+      .card-text, .mission-list li {
+        font-size: 14px;
+      }
+      
+      .mission-list li {
+        margin-bottom: 8px;
+      }
+      
+      .divider-short {
+        margin-bottom: 12px;
+      }
+    }
+    
+    @media (max-width: 576px) {
+      .section-title {
+        font-size: 22px;
+      }
+      
+      .card-title {
+        font-size: 17px;
+      }
+      
+      .card-text, .mission-list li {
+        font-size: 13px;
+        line-height: 1.6;
+      }
+      
+      .mission-list {
+        padding-left: 15px;
+      }
+      
+      .mission-list li:before {
+        left: -15px;
+        top: 7px;
       }
     }
 
@@ -274,8 +429,8 @@
     }
 
     .footer_section p {
-  text-align: center;
-}
+      text-align: center;
+    }
 
     /* Penyesuaian dropdown bahasa */
     .nav-item.dropdown .dropdown-menu {
@@ -304,6 +459,99 @@
     .legalitas-container {
       text-align: left;
     }
+
+    /* Navbar Styles - Warna Abu Tua */
+    .header_bottom {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 1000;
+        background: #333;
+        padding: 10px 0;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    }
+    
+    .navbar {
+        padding: 0;
+    }
+    
+    .navbar-nav {
+        align-items: center;
+    }
+    
+    .nav-item {
+        margin: 0 8px;
+    }
+    
+    .nav-link {
+        color: white !important;
+        font-weight: 500;
+        font-size: 14px;
+        padding: 10px 15px !important;
+        text-transform: uppercase;
+        transition: all 0.3s;
+        border-radius: 4px;
+    }
+    
+    .nav-link:hover {
+        color: white !important;
+        background-color: #555;
+    }
+    
+    .dropdown-menu {
+        background-color: #444;
+        border: none;
+        border-radius: 0 0 5px 5px;
+    }
+    
+    .dropdown-item {
+        color: white !important;
+        padding: 10px 20px;
+        transition: all 0.2s;
+    }
+    
+    .dropdown-item:hover {
+        background-color: #555;
+    }
+    
+    .navbar-toggler {
+        border-color: rgba(255, 255, 255, 0.5);
+    }
+    
+    .navbar-toggler-icon {
+        background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 255, 255, 0.8)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+    }
+    
+    /* Responsive adjustments */
+    @media (max-width: 992px) {
+        .navbar-collapse {
+            background-color: #333;
+            padding: 15px;
+            margin-top: 10px;
+            border-radius: 5px;
+        }
+        
+        .nav-item {
+            margin: 5px 0;
+        }
+        
+        .dropdown-menu {
+            background-color: #444;
+            margin-left: 15px;
+        }
+    }
+    
+    @media (max-width: 768px) {
+        .nav-link {
+            font-size: 13px;
+            padding: 8px 12px !important;
+        }
+        
+        .navbar-brand img {
+            height: 40px !important;
+        }
+    }
   </style>
 </head>
 <body>
@@ -312,182 +560,112 @@
     Your browser does not support the audio element.
   </audio>
 
-
-
-   <!-- Navbar -->
-<div class="header_bottom">
-  <div class="container-fluid">
-      <nav class="navbar navbar-expand-lg custom_nav-container">
-          <a class="navbar-brand" href="index.html">
-              <img src="images/logo2.png" alt="Logo" style="height: 50px; width: auto;">
-          </a>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" 
-                  aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-              <ul class="navbar-nav ml-auto">
-                  <li class="nav-item active">
-                      <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
-                  </li>
-                  <li class="nav-item">
-                      <a class="nav-link" href="about.html">About</a>
-                  </li>
-                  <li class="nav-item dropdown">
-                      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" 
-                         data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                          Top Management
-                      </a>
-                      <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                          <a class="dropdown-item" href="service.html">Pendiri Koperasi</a>
-                          <a class="dropdown-item" href="advisor pengawas.html">Advisor Koperasi</a>
-                          <a class="dropdown-item" href="legal koperasi.html">Legal Koperasi</a>
-                          <a class="dropdown-item" href="dewan pengawas.html">Dewan Pengawas</a>
-                          <a class="dropdown-item" href="anggota.html">Anggota Koperasi</a>
-                      </div>
-                  </li>
-                  <li class="nav-item">
-                      <a class="nav-link" href="team.html">Contact</a>
-                  </li>
-                  <li class="nav-item">
-                      <a class="nav-link" href="portofolio.html">Portofolio</a>
-                  </li>
-                  <li class="nav-item">
-                      <a class="nav-link" href="berita.html">Berita</a>
-                  </li>
-                  <li class="nav-item">
-                      <a class="nav-link" href="galeri.html">Galeri</a>
-                  </li>
-                  <!-- Dropdown Bahasa -->
-                  <li class="nav-item dropdown">
-                      <a class="nav-link dropdown-toggle" href="#" id="languageDropdown" role="button" 
-                         data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                          <img src="https://flagcdn.com/id.svg" alt="Indonesia" style="width: 20px; height: auto;"> ID
-                      </a>
-                      <div class="dropdown-menu dropdown-menu-right" aria-labelledby="languageDropdown">
-                          <a class="dropdown-item" href="#" data-lang="id">
-                              <img src="https://flagcdn.com/id.svg" alt="Indonesia" style="width: 20px; height: auto;"> Indonesia
-                          </a>
-                          <a class="dropdown-item" href="#" data-lang="en">
-                              <img src="https://flagcdn.com/gb.svg" alt="English" style="width: 20px; height: auto;"> English
-                          </a>
-                      </div>
-                  </li>
-              </ul>
-          </div>
-      </nav>
+  <!-- Navbar -->
+  <div class="header_bottom">
+    <div class="container-fluid">
+        <nav class="navbar navbar-expand-lg custom_nav-container">
+            <a class="navbar-brand" href="index.html">
+                <img src="images/logo2.png" alt="Logo" style="height: 50px; width: auto;">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" 
+                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" 
+                           data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Top Management
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="service.html">Pendiri Koperasi</a>
+                            <a class="dropdown-item" href="advisor pengawas.html">Advisor Koperasi</a>
+                            <a class="dropdown-item" href="legal koperasi.html">Legal Koperasi</a>
+                            <a class="dropdown-item" href="dewan pengawas.html">Dewan Pengawas</a>
+                            <a class="dropdown-item" href="anggota.html">Anggota Koperasi</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="team.html">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="portofolio.html">Portofolio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="berita.html">Berita</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="galeri.html">Galeri</a>
+                    </li>
+                    <!-- Dropdown Bahasa -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="languageDropdown" role="button" 
+                           data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <img src="https://flagcdn.com/id.svg" alt="Indonesia" style="width: 20px; height: auto;"> ID
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="languageDropdown">
+                            <a class="dropdown-item" href="#" data-lang="id">
+                                <img src="https://flagcdn.com/id.svg" alt="Indonesia" style="width: 20px; height: auto;"> Indonesia
+                            </a>
+                            <a class="dropdown-item" href="#" data-lang="en">
+                                <img src="https://flagcdn.com/gb.svg" alt="English" style="width: 20px; height: auto;"> English
+                            </a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
   </div>
-</div>
 
-<style>
-  /* Navbar Styles - Warna Abu Tua */
-  .header_bottom {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      z-index: 1000;
-      background: #333; /* Warna abu tua solid */
-      padding: 10px 0;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.2);
-  }
-  
-  .navbar {
-      padding: 0;
-  }
-  
-  .navbar-nav {
-      align-items: center;
-  }
-  
-  .nav-item {
-      margin: 0 8px;
-  }
-  
-  .nav-link {
-      color: white !important;
-      font-weight: 500;
-      font-size: 14px;
-      padding: 10px 15px !important;
-      text-transform: uppercase;
-      transition: all 0.3s;
-      border-radius: 4px;
-  }
-  
-  .nav-link:hover {
-      color: white !important;
-      background-color: #555; /* Warna abu lebih terang saat hover */
-  }
-  
-  .dropdown-menu {
-      background-color: #444; /* Warna abu untuk dropdown */
-      border: none;
-      border-radius: 0 0 5px 5px;
-  }
-  
-  .dropdown-item {
-      color: white !important;
-      padding: 10px 20px;
-      transition: all 0.2s;
-  }
-  
-  .dropdown-item:hover {
-      background-color: #555; /* Warna hover untuk dropdown item */
-  }
-  
-  .navbar-toggler {
-      border-color: rgba(255, 255, 255, 0.5);
-  }
-  
-  .navbar-toggler-icon {
-      background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 255, 255, 0.8)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
-  }
-  
-  /* Responsive adjustments */
-  @media (max-width: 992px) {
-      .navbar-collapse {
-          background-color: #333; /* Warna sama dengan desktop */
-          padding: 15px;
-          margin-top: 10px;
-          border-radius: 5px;
-      }
-      
-      .nav-item {
-          margin: 5px 0;
-      }
-      
-      .dropdown-menu {
-          background-color: #444;
-          margin-left: 15px;
-      }
-  }
-  
-  @media (max-width: 768px) {
-      .nav-link {
-          font-size: 13px;
-          padding: 8px 12px !important;
-      }
-      
-      .navbar-brand img {
-          height: 40px !important;
-      }
-  }
-</style>
-
-  <!-- Visi & Misi -->
-  <div class="section">
-    <div class="container fade-in center-content">
-      <div class="heading_container">
-        <h2 id="visiMisiTitle">VISI & MISI</h2>
+  <!-- Visi & Misi Section - Enhanced for Mobile -->
+  <div class="section vision-mission-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <div class="heading_container text-center mb-4">
+            <h2 id="visiMisiTitle" class="section-title">VISI & MISI</h2>
+            <div class="title-divider"></div>
+          </div>
+        </div>
       </div>
-      <p id="visiMisiDescription" class="justify-text">Menjadikan koperasi terintegrasi termindset, serta mendukung unit-unit usaha yang berintegritas dan berkelanjutan dengan sumber daya manusia profesional, berkualitas, dan mampu bersaing secara global.</p>
-      <ol id="visiMisiList" class="justify-text">
-        <li>Memberikan kepuasan kepada wirausaha mikro kecil, UMKM, petani, nelayan, serta masyarakat dengan pelayanan berkualitas unggul.</li>
-        <li>Menjalankan sistem koperasi pertambangan yang ramah lingkungan dengan menjaga ekosistem pasca tambang (reboisasi) serta menegakkan etika bisnis.</li>
-        <li>Berpartisipasi dalam membangun negara dengan menumbuhkembangkan jiwa kewirausahaan dan kemitraan koperasi.</li>
-        <li>Membentuk jiwa kemandirian melalui edukasi dan kemitraan dalam membangun koperasi bersama serta meningkatkan pendapatan anggota.</li>
-        <li>Membangun organisasi koperasi yang terpercaya, sehat, terus bertumbuh, dan bermanfaat bagi anggota serta masyarakat.</li>
-      </ol>
+      
+      <div class="row">
+        <div class="col-lg-6 col-md-6 col-12 mb-4 mb-md-0">
+          <div class="vision-card card h-100">
+            <div class="card-body">
+              <h3 class="card-title">Visi</h3>
+              <div class="divider-short"></div>
+              <p id="visiMisiDescription" class="card-text">
+                Menjadikan koperasi terintegrasi termindset, serta mendukung unit-unit usaha yang berintegritas dan berkelanjutan dengan sumber daya manusia profesional, berkualitas, dan mampu bersaing secara global.
+              </p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-lg-6 col-md-6 col-12">
+          <div class="mission-card card h-100">
+            <div class="card-body">
+              <h3 class="card-title">Misi</h3>
+              <div class="divider-short"></div>
+              <ol id="visiMisiList" class="mission-list">
+                <li>Memberikan kepuasan kepada wirausaha mikro kecil, UMKM, petani, nelayan, serta masyarakat dengan pelayanan berkualitas unggul.</li>
+                <li>Menjalankan sistem koperasi pertambangan yang ramah lingkungan dengan menjaga ekosistem pasca tambang (reboisasi) serta menegakkan etika bisnis.</li>
+                <li>Berpartisipasi dalam membangun negara dengan menumbuhkembangkan jiwa kewirausahaan dan kemitraan koperasi.</li>
+                <li>Membentuk jiwa kemandirian melalui edukasi dan kemitraan dalam membangun koperasi bersama serta meningkatkan pendapatan anggota.</li>
+                <li>Membangun organisasi koperasi yang terpercaya, sehat, terus bertumbuh, dan bermanfaat bagi anggota serta masyarakat.</li>
+              </ol>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 
@@ -548,7 +726,7 @@
           <li>Mengurangi risiko pelanggaran hukum dan kerugian finansial.</li>
           <li>Meningkatkan produktivitas anggota koperasi dan memperbaiki kualitas kinerja anggota koperasi dan mitra koperasi.</li>
           <li>Mendorong kami untuk mengambil peran untuk berkontribusi ke Negara dan masyarakat.</li>
-          <li>Berpegang pada tanggung jawab adalah wilayah tertinggi dalam pemikiran. Memiliki rasa bertanggung jawab adalah sifat terbaik; karena memberi keberanian, energi, dan kebijaksanaan.</li>
+          <li>Berpegang pada tanggung jawab adalah wilayah tertinggi dalam pemikiran. Memiliki rasa bertanggung jawab adalah sifat terbaik; karena memberi keberanian, energia, dan kebijaksanaan.</li>
         </ol>
       </div>
     </div>
@@ -613,7 +791,7 @@
         ],
         manfaatEtikaTitle: "Manfaat Menegakkan Etika Bisnis:",
         manfaatEtikaList: [
-          "Membangun kepercayaan dengan stakeholder, pemangku kepentingan, pelanggan mitra koperasi, anggota koperasi, dan masyarakat umumnya.",
+          "Membangun kepercayaan dengan stakeholder, pemangku kepentingan, pelanggan mitra koperasi, anggota ⬤koperasi, dan masyarakat umumnya.",
           "Mengurangi risiko pelanggaran hukum dan kerugian finansial.",
           "Meningkatkan produktivitas anggota koperasi dan memperbaiki kualitas kinerja anggota koperasi dan mitra koperasi.",
           "Mendorong kami untuk mengambil peran untuk berkontribusi ke Negara dan masyarakat.",
@@ -695,7 +873,7 @@
       // Ambil elemen yang perlu diubah
       document.getElementById("visiMisiTitle").textContent = content[lang].visiMisiTitle;
       document.getElementById("visiMisiDescription").textContent = content[lang].visiMisiDescription;
-      document.getElementById("visiMisiList").innerHTML = content[lang].visiMisiList.map(item => `<li>${item }</li>`).join("");
+      document.getElementById("visiMisiList").innerHTML = content[lang].visiMisiList.map(item => `<li>${item}</li>`).join("");
       document.getElementById("riwayatTitle").textContent = content[lang].riwayatTitle;
       document.getElementById("riwayatDescription1").textContent = content[lang].riwayatDescription1;
       document.getElementById("riwayatDescription2").textContent = content[lang].riwayatDescription2;
@@ -730,6 +908,9 @@
     document.addEventListener("DOMContentLoaded", function () {
       const savedLang = localStorage.getItem("language") || "id"; // Default bahasa Indonesia
       changeLanguage(savedLang);
+      
+      // Set tahun di footer
+      document.getElementById("displayYear").textContent = new Date().getFullYear();
     });
 
     // Animasi scroll
@@ -768,29 +949,29 @@
   </script>
 
   <script>
-   const audio = document.getElementById('background-music');
-const musicParts = [
-  { start: 33, end: 264 }, // menit ke-0.33 - 4.44
-  { start: 264, end: audio.duration } // menit ke-4.44 - akhir lagu
-];
+    const audio = document.getElementById('background-music');
+    const musicParts = [
+      { start: 33, end: 264 }, // menit ke-0.33 - 4.44
+      { start: 264, end: audio.duration } // menit ke-4.44 - akhir lagu
+    ];
 
-let currentPart = localStorage.getItem('currentPart') || 0;
-let currentTime = localStorage.getItem('currentTime') || musicParts[currentPart].start;
-audio.currentTime = currentTime;
+    let currentPart = localStorage.getItem('currentPart') || 0;
+    let currentTime = localStorage.getItem('currentTime') || musicParts[currentPart].start;
+    audio.currentTime = currentTime;
 
-audio.addEventListener('timeupdate', () => {
-  localStorage.setItem('currentTime', audio.currentTime);
-  localStorage.setItem('currentPart', currentPart);
-  if (audio.currentTime >= musicParts[currentPart].end) {
-    currentPart++;
-    if (currentPart >= musicParts.length) {
-      currentPart = 0;
-      audio.currentTime = musicParts[currentPart].start;
-    } else {
-      audio.currentTime = musicParts[currentPart].start;
-    }
-  }
-});
+    audio.addEventListener('timeupdate', () => {
+      localStorage.setItem('currentTime', audio.currentTime);
+      localStorage.setItem('currentPart', currentPart);
+      if (audio.currentTime >= musicParts[currentPart].end) {
+        currentPart++;
+        if (currentPart >= musicParts.length) {
+          currentPart = 0;
+          audio.currentTime = musicParts[currentPart].start;
+        } else {
+          audio.currentTime = musicParts[currentPart].start;
+        }
+      }
+    });
   </script>
 </body>
 </html>
