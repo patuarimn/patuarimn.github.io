@@ -32,51 +32,220 @@
   <link href="css/responsive.css" rel="stylesheet" />
 
   <style>
-    .team-member {
-      background-color: #fff;
-      border: 1px solid #ddd;
-      border-radius: 8px;
+    /* Improved Gallery Styles */
+    .gallery-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 30px;
       padding: 20px;
-      margin: 10px;
-      text-align: center;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-      width: 200px;
-    }
-
-    .team-member h3 {
-      margin: 0;
-      font-size: 18px;
-      color: #333;
-    }
-
-    .team-member p {
-      margin: 5px 0 0;
-      font-size: 14px;
-      color: #777;
-    }
-
-    .top-members {
-      display: flex;
-      justify-content: center;
-      margin-bottom: 40px;
-      flex-wrap: wrap;
-    }
-
-    .img-box img {
-      width: 100px; /* Ukuran foto disesuaikan */
-      height: 100px; /* Ukuran foto disesuaikan */
-      border-radius: 50%; /* Membuat foto bulat */
-      object-fit: cover; /* Memastikan foto tidak terdistorsi */
-    }
-
-    .service_owl-carousel .img-box img {
-      width: 150px; /* Ukuran foto di carousel */
-      height: 150px; /* Ukuran foto di carousel */
-      border-radius: 50%; /* Membuat foto bulat */
-      object-fit: cover; /* Memastikan foto tidak terdistorsi */
+      max-width: 1200px;
+      margin: 0 auto;
     }
     
-    /* Perbaikan Footer */
+    .featured-gallery-item {
+      grid-column: 1 / -1;
+      display: flex;
+      flex-direction: column;
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      overflow: hidden;
+      margin-bottom: 30px;
+    }
+    
+    .featured-image-container {
+      height: 400px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #f5f5f5;
+      overflow: hidden;
+    }
+    
+    .featured-gallery-item img {
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain;
+      display: block;
+    }
+    
+    .featured-caption {
+      padding: 25px;
+      background: white;
+    }
+    
+    .featured-caption h4 {
+      margin-top: 0;
+      color: #333;
+      font-size: 22px;
+    }
+    
+    .featured-caption p {
+      color: #666;
+      font-size: 16px;
+      line-height: 1.6;
+      margin-bottom: 0;
+    }
+    
+    .gallery-item {
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      overflow: hidden;
+      transition: transform 0.3s ease;
+    }
+    
+    .gallery-item:hover {
+      transform: translateY(-5px);
+    }
+    
+    .gallery-image-container {
+      height: 250px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #f5f5f5;
+      overflow: hidden;
+    }
+    
+    .gallery-item img {
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain;
+      display: block;
+      transition: transform 0.3s ease;
+    }
+    
+    .gallery-item:hover img {
+      transform: scale(1.05);
+    }
+    
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+      .gallery-container {
+        grid-template-columns: 1fr;
+      }
+      
+      .featured-image-container {
+        height: 250px;
+      }
+      
+      .gallery-image-container {
+        height: 200px;
+      }
+    }
+    
+    /* Improved Eid Section */
+    .eid-container {
+      max-width: 600px;
+      margin: 30px auto;
+      text-align: center;
+      padding: 20px;
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    
+    .eid-image {
+      max-width: 100%;
+      height: auto;
+      border-radius: 6px;
+      margin: 15px 0;
+    }
+    
+    /* Navbar Styles */
+    .header_bottom {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+      background: #333;
+      padding: 10px 0;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    }
+    
+    .navbar {
+      padding: 0;
+    }
+    
+    .navbar-nav {
+      align-items: center;
+    }
+    
+    .nav-item {
+      margin: 0 8px;
+    }
+    
+    .nav-link {
+      color: white !important;
+      font-weight: 500;
+      font-size: 14px;
+      padding: 10px 15px !important;
+      text-transform: uppercase;
+      transition: all 0.3s;
+      border-radius: 4px;
+    }
+    
+    .nav-link:hover {
+      color: white !important;
+      background-color: #555;
+    }
+    
+    .dropdown-menu {
+      background-color: #444;
+      border: none;
+      border-radius: 0 0 5px 5px;
+    }
+    
+    .dropdown-item {
+      color: white !important;
+      padding: 10px 20px;
+      transition: all 0.2s;
+    }
+    
+    .dropdown-item:hover {
+      background-color: #555;
+    }
+    
+    .navbar-toggler {
+      border-color: rgba(255, 255, 255, 0.5);
+    }
+    
+    .navbar-toggler-icon {
+      background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 255, 255, 0.8)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+    }
+    
+    @media (max-width: 992px) {
+      .navbar-collapse {
+        background-color: #333;
+        padding: 15px;
+        margin-top: 10px;
+        border-radius: 5px;
+      }
+      
+      .nav-item {
+        margin: 5px 0;
+      }
+      
+      .dropdown-menu {
+        background-color: #444;
+        margin-left: 15px;
+      }
+    }
+    
+    @media (max-width: 768px) {
+      .nav-link {
+        font-size: 13px;
+        padding: 8px 12px !important;
+      }
+      
+      .navbar-brand img {
+        height: 40px !important;
+      }
+    }
+    
+    /* Footer Styles */
     .footer_section {
       background-color: #222;
       color: #fff;
@@ -91,24 +260,20 @@
       font-size: 14px;
     }
     
-    /* Perbaikan container untuk full width */
-    .container-fluid {
-      padding-right: 15px;
-      padding-left: 15px;
-      margin-right: auto;
-      margin-left: auto;
-      width: 100%;
+    /* Service Section */
+    .service_section {
+      padding-bottom: 40px;
     }
     
-    /* Perbaikan spacing */
+    .heading_container.heading_center {
+      text-align: center;
+    }
+    
+    /* Lebaran Section */
     .lebaran-section {
       padding: 25px 0;
       background-color: #f8f9fa;
       margin-bottom: 40px;
-    }
-    
-    .service_section {
-      padding-bottom: 40px;
     }
   </style>
 </head>
@@ -119,8 +284,8 @@
     Your browser does not support the audio element.
   </audio>
   
-<!-- Navbar -->
-<div class="header_bottom">
+  <!-- Navbar -->
+  <div class="header_bottom">
     <div class="container-fluid">
         <nav class="navbar navbar-expand-lg custom_nav-container">
             <a class="navbar-brand" href="index.html">
@@ -163,7 +328,7 @@
                     <li class="nav-item">
                         <a class="nav-link" href="galeri.html">Galeri</a>
                     </li>
-                    <!-- Dropdown Bahasa -->
+                    <!-- Language Dropdown -->
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="languageDropdown" role="button" 
                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -182,102 +347,8 @@
             </div>
         </nav>
     </div>
-</div>
+  </div>
 
-<style>
-    /* Navbar Styles - Warna Abu Tua */
-    .header_bottom {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        z-index: 1000;
-        background: #333; /* Warna abu tua solid */
-        padding: 10px 0;
-        box-shadow: 0 2px 10px rgba(0,0,0,0.2);
-    }
-    
-    .navbar {
-        padding: 0;
-    }
-    
-    .navbar-nav {
-        align-items: center;
-    }
-    
-    .nav-item {
-        margin: 0 8px;
-    }
-    
-    .nav-link {
-        color: white !important;
-        font-weight: 500;
-        font-size: 14px;
-        padding: 10px 15px !important;
-        text-transform: uppercase;
-        transition: all 0.3s;
-        border-radius: 4px;
-    }
-    
-    .nav-link:hover {
-        color: white !important;
-        background-color: #555; /* Warna abu lebih terang saat hover */
-    }
-    
-    .dropdown-menu {
-        background-color: #444; /* Warna abu untuk dropdown */
-        border: none;
-        border-radius: 0 0 5px 5px;
-    }
-    
-    .dropdown-item {
-        color: white !important;
-        padding: 10px 20px;
-        transition: all 0.2s;
-    }
-    
-    .dropdown-item:hover {
-        background-color: #555; /* Warna hover untuk dropdown item */
-    }
-    
-    .navbar-toggler {
-        border-color: rgba(255, 255, 255, 0.5);
-    }
-    
-    .navbar-toggler-icon {
-        background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 255, 255, 0.8)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
-    }
-    
-    /* Responsive adjustments */
-    @media (max-width: 992px) {
-        .navbar-collapse {
-            background-color: #333; /* Warna sama dengan desktop */
-            padding: 15px;
-            margin-top: 10px;
-            border-radius: 5px;
-        }
-        
-        .nav-item {
-            margin: 5px 0;
-        }
-        
-        .dropdown-menu {
-            background-color: #444;
-            margin-left: 15px;
-        }
-    }
-    
-    @media (max-width: 768px) {
-        .nav-link {
-            font-size: 13px;
-            padding: 8px 12px !important;
-        }
-        
-        .navbar-brand img {
-            height: 40px !important;
-        }
-    }
-</style>
   <!-- service section -->
   <section class="service_section layout_padding">
     <div class="container">
@@ -289,12 +360,50 @@
     </div>
   </section>
 
+  <!-- Gallery Section -->
+  <div class="gallery-container">
+    <!-- Featured Item (with description) -->
+    <div class="featured-gallery-item">
+      <div class="featured-image-container">
+        <img src="images/galeri/1.jpeg" alt="Kegiatan Pertambangan">
+      </div>
+      <div class="featured-caption">
+        <h4>Kegiatan Pertambangan Ramah Lingkungan</h4>
+        <p>Koperasi Patuari Mining Niaga Telah Melakukan Sosialisasi Penambang Rakyat Desa Motandoi Dengan System Metode Eco Friendly / Ramah Lingkungan. Guna Menjaga Ekosistem, Serta Pengurusan Izin WPR & IPR Kerjasama Dengan Kelompok Penambang Rakyat Desa Motandoi, Bersama Tokoh Masyarakat Adat Lingkar Tambang, Babinsa, Kepala Desa /Sangaji Desa Motandoi. Lokasi : Desa Motandoi - Kabupaten Bolaang Mongondow Selatan.</p>
+      </div>
+    </div>
+    
+    <!-- Other items without description -->
+    <div class="gallery-item">
+      <div class="gallery-image-container">
+        <img src="images/galeri/2.jpeg" alt="Rapat Anggota Koperasi">
+      </div>
+    </div>
+    
+    <div class="gallery-item">
+      <div class="gallery-image-container">
+        <img src="images/galeri/3.jpeg" alt="Pelatihan Karyawan">
+      </div>
+    </div>
+    
+    <div class="gallery-item">
+      <div class="gallery-image-container">
+        <img src="images/galeri/4.jpeg" alt="Kunjungan Lapangan">
+      </div>
+    </div>
+    
+    <div class="gallery-item">
+      <div class="gallery-image-container">
+        <img src="images/galeri/5.jpeg" alt="Acara Sosial">
+      </div>
+    </div>
+  </div>
+
   <!-- Ucapan Lebaran Section -->
   <section class="lebaran-section">
-    <div class="container text-center">
+    <div class="eid-container">
       <h3 style="color: #000; font-size: 1.5rem; font-weight: 700; margin-bottom: 15px;">SELAMAT HARI RAYA IDUL FITRI 1446 H</h3>
-      <img src="images/eid fit.jpeg" alt="Selamat Hari Raya Idul Fitri" class="img-fluid" 
-           style="max-width: 500px; width: 90%; height: auto; border-radius: 6px; display: block; margin: 0 auto;">
+      <img src="images/eid fit.jpeg" alt="Selamat Hari Raya Idul Fitri" class="eid-image">
       <div class="mt-2" style="color: #000;">
         <p style="font-size: 0.95rem; color: #000; margin-bottom: 3px;">"Minal Aidin Wal Faidzin, Mohon Maaf Lahir dan Batin"</p>
       </div>
@@ -346,8 +455,6 @@
     // Fungsi untuk mengubah bahasa
     function changeLanguage(lang) {
       document.getElementById("sectionTitle").innerHTML = content[lang].sectionTitle;
-      document.getElementById("sectionDescription").textContent = content[lang].sectionDescription;
-      document.getElementById("legalTitle").textContent = content[lang].legalTitle;
       document.getElementById("footerText").innerHTML = content[lang].footerText;
 
       // Simpan preferensi bahasa ke localStorage
@@ -367,6 +474,9 @@
     document.addEventListener("DOMContentLoaded", function () {
       const savedLang = localStorage.getItem("language") || "id"; // Default bahasa Indonesia
       changeLanguage(savedLang);
+      
+      // Set current year in footer
+      document.getElementById('displayYear').textContent = new Date().getFullYear();
     });
   </script>
   <script>
