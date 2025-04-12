@@ -35,7 +35,7 @@
     /* Improved Gallery Styles */
     .gallery-container {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      grid-template-columns: repeat(2, 1fr); /* Changed to 2 columns */
       gap: 30px;
       padding: 20px;
       max-width: 1200px;
@@ -43,7 +43,7 @@
     }
     
     .featured-gallery-item {
-      grid-column: 1 / -1;
+      grid-column: 1 / -1; /* Featured item spans all columns */
       display: flex;
       flex-direction: column;
       background: white;
@@ -123,7 +123,7 @@
     /* Responsive adjustments */
     @media (max-width: 768px) {
       .gallery-container {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr; /* Single column on mobile */
       }
       
       .featured-image-container {
@@ -262,11 +262,12 @@
     
     /* Service Section */
     .service_section {
-      padding-bottom: 40px;
+      padding: 40px 0 20px 0; /* Adjusted padding */
     }
     
     .heading_container.heading_center {
       text-align: center;
+      margin-top: 30px; /* Added margin to create space below navbar */
     }
     
     /* Lebaran Section */
@@ -275,6 +276,45 @@
       background-color: #f8f9fa;
       margin-bottom: 40px;
     }
+
+    .featured-caption p:first-child {
+      margin-bottom: 20px; /* Space between paragraphs */
+    }
+    
+    /* Adjusted spacing between title and first image */
+    .gallery-container {
+      margin-top: 20px;
+    }
+    
+    /* Navbar fixed with proper spacing */
+.header_bottom {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  background: #333;
+  padding: 10px 0;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+}
+
+/* Body padding to compensate for fixed navbar */
+body {
+  padding-top: 60px; /* Reduced from 70px */
+}
+
+/* Gallery container adjustment */
+.gallery-container {
+  margin-top: 10px; /* Reduced from 20px */
+}
+
+/* Service section fine-tuning */
+.service_section {
+  padding: 15px 0 5px 0 !important;
+}
+
+.heading_container.heading_center {
+  margin-bottom: 10px !important;
+}
   </style>
 </head>
 
@@ -347,12 +387,12 @@
             </div>
         </nav>
     </div>
-  </div>
+  </div>   
 
   <!-- service section -->
-  <section class="service_section layout_padding">
+<section class="service_section" style="padding-top: 60px; padding-bottom: 5px;">
     <div class="container">
-      <div class="heading_container heading_center">
+      <div class="heading_container heading_center" style="margin-bottom: 10px;">
         <h2 id="sectionTitle">
           Galeri Kegiatan
         </h2>
@@ -369,11 +409,13 @@
       </div>
       <div class="featured-caption">
         <h4>Kegiatan Pertambangan Ramah Lingkungan</h4>
-        <p>Koperasi Patuari Mining Niaga Telah Melakukan Sosialisasi Penambang Rakyat Desa Motandoi Dengan System Metode Eco Friendly / Ramah Lingkungan. Guna Menjaga Ekosistem, Serta Pengurusan Izin WPR & IPR Kerjasama Dengan Kelompok Penambang Rakyat Desa Motandoi, Bersama Tokoh Masyarakat Adat Lingkar Tambang, Babinsa, Kepala Desa /Sangaji Desa Motandoi. Lokasi : Desa Motandoi - Kabupaten Bolaang Mongondow Selatan.</p>
+        <p>Koperasi Patuari Mining Niaga Telah Melakukan Sosialisasi Penambang Rakyat Desa Motandoi Dengan System Metode Eco Friendly / Ramah Lingkungan. Guna Menjaga Ekosistem, Serta Pengurusan Izin WPR & IPR Kerjasama Dengan Kelompok Penambang Rakyat Desa Motandoi, Bersama Tokoh Masyarakat Adat Lingkar Tambang, Babinsa, Kepala Desa /Sangaji Desa Motandoi.</p>
+        
+        <p>Lokasi : Desa Motandoi - Kabupaten Bolaang Mongondow Selatan.</p>
       </div>
     </div>
     
-    <!-- Other items without description -->
+    <!-- Other items - now in 2x2 grid -->
     <div class="gallery-item">
       <div class="gallery-image-container">
         <img src="images/galeri/2.jpeg" alt="Rapat Anggota Koperasi">
