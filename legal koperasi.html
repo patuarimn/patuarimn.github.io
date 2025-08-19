@@ -32,6 +32,7 @@
   <link href="css/responsive.css" rel="stylesheet" />
 
   <style>
+    
     .team-member {
       background-color: #fff;
       border: 1px solid #ddd;
@@ -263,13 +264,13 @@
                  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Top Management
               </a>
-              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="service.html">Pendiri Koperasi</a>
-                <a class="dropdown-item" href="advisor pengawas.html">Advisor Koperasi</a>
-                <a class="dropdown-item" href="legal koperasi.html">Legal Koperasi</a>
-                <a class="dropdown-item" href="dewan pengawas.html">Dewan Pengawas</a>
-                <a class="dropdown-item" href="anggota.html">Anggota Koperasi</a>
-              </div>
+             <div class="dropdown-menu transparent-box-dropdown" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="service.html">Penasehat</a>
+                            <a class="dropdown-item" href="advisor pengawas.html">Pendiri</a>
+                            <a class="dropdown-item" href="legal koperasi.html">Pengurus</a>
+                            <a class="dropdown-item" href="dewan pengawas.html">Pengawas</a>
+                            <a class="dropdown-item" href="anggota.html">Anggota</a>
+                        </div>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="team.html">Contact</a>
@@ -309,7 +310,7 @@
     <div class="container">
       <div class="heading_container heading_center">
         <h2 id="sectionTitle">
-          STRUKTUR KOPERASI <br> PATUARI MINING NIAGA
+          STRUKTUR KOPERASI <br> OCTA MINING NIAGA
         </h2>
         <p id="sectionDescription" class="col-lg-8 px-0">
           LEGAL KOPERASI
@@ -317,18 +318,42 @@
       </div>
 
       <!-- Anggota dengan Carousel -->
-      <div class="service_container">
-        <div class="carousel-wrap">
-          <!-- Anggota 1 -->
-          <div class="item">
-            <div class="box">
-              <div class="img-box">
-              </div>
-              <div class="detail-box">
-                <h5 id="legalTitle"></h5>
-              </div>
-            </div>
-          </div>
+<div class="service_container">
+  <div class="carousel-wrap">
+    <!-- Ketua -->
+    <div class="item">
+      <div class="box">
+        <h3>Ketua</h3>
+        <div class="img-box">
+        <img src="images/s1.png" alt="Abdul Majid Rahman" /> <!-- Add this line -->
+        </div>
+        <div class="detail-box">
+          <p>Abdul Majid Rahman</p>
+        </div>
+      </div>
+    </div>
+     <div class="item">
+      <div class="box">
+        <h3>Sekretaris</h3>
+        <div class="img-box">
+        <img src="images/s1.png" alt="Abdul Majid Rahman" /> <!-- Add this line -->
+        </div>
+        <div class="detail-box">
+          <p>Ramli Syawal.</p>
+        </div>
+      </div>
+    </div>
+    <div class="item">
+      <div class="box">
+        <h3>Bendahara</h3>
+        <div class="img-box">
+        <img src="images/s1.png" alt="Abdul Majid Rahman" /> <!-- Add this line -->
+        </div>
+        <div class="detail-box">
+          <p>Kifli Magister Ekonom.</p>
+        </div>
+      </div>
+    </div>
         </div>
       </div>
     </div>
@@ -363,13 +388,13 @@
     // Data konten dalam dua bahasa
     const content = {
       id: {
-        sectionTitle: "STRUKTUR KOPERASI <br> PATUARI MINING NIAGA",
-        sectionDescription: "LEGAL KOPERASI",
+        sectionTitle: "STRUKTUR KOPERASI <br> OCTA MINING NIAGA",
+        sectionDescription: "PENGURUS KOPERASI",
         footerText: "&copy; <span id='displayYear'></span> All Rights Reserved By Patuari Mining Niaga"
       },
       en: {
-        sectionTitle: "STRUCTURE OF <br> PATUARI MINING NIAGA COOPERATIVE",
-        sectionDescription: "COOPERATIVE LEGAL",
+        sectionTitle: "STRUCTURE OF <br> OCTA MINING NIAGA COOPERATIVE",
+        sectionDescription: "COOPERATIVE ADMININSTRATION",
         legalTitle: "Cooperative Legal",
         footerText: "&copy; <span id='displayYear'></span> All Rights Reserved By Patuari Mining Niaga"
       }
